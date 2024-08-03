@@ -34,7 +34,7 @@ to downloading this locally automatically I then tried integrating the backend a
 as i guess those api are enabled for their own frontend domain using cors.So I tried the backend api for berkeley it was working fine and a zip file was getting downloaded which had data about all other website like that of 
 verra and gold buffer so analyzed the file provided by the zip verra and buffer were the most compatible one so I took the data from
 the same but the download time of the zip file was very big so I only download once a day and save the required field locally and for the whole data gets fetched from the local file and then I used the column which was similar in both to creatiing the merged data and then I did some analysis on the data where i faced a problem that some data does not have credit value which was set to 0 so toh handle the situation
-I took those data which is not zero for lowest value and did the same with the highest value which felt manipulated.
+I took those data which is not zero for lowest value and did the same with the highest value which felt manipulated used chatgpt to get suggestions.
 Then I vizualized the data with various type of charts like stacked bar chart and bar chart for top 10 project and country line chart for trend of credit over the year.
 
 
