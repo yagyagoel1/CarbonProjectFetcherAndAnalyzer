@@ -10,6 +10,7 @@ import seaborn as sns
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
 from logger import logger
 
+
 def wrap_text(text, max_words=4):
     words = text.split() #spliting the text using spaces 
     #checking if the words length is nore than max words if yes divide it into lines by iterating over words with 4 step
@@ -17,6 +18,7 @@ def wrap_text(text, max_words=4):
     if len(words) > max_words:
         return '\n'.join([' '.join(words[i:i+max_words]) for i in range(0, len(words), max_words)])
     return text
+
 
 def visualize_data(credits_by_country, credits_by_project_type, credits_by_year, highest_credit_project, lowest_credit_project,unified_df):
 
@@ -116,5 +118,5 @@ def visualize_data(credits_by_country, credits_by_project_type, credits_by_year,
     plt.savefig('public/images/highest_lowest_credit_issuance.png')
     plt.clf()  # Clear the figure to avoid overlap
     
-    
+
     logger.info("Visualizations created successfully.")
