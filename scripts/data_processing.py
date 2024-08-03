@@ -31,32 +31,7 @@ def clean_verra_data(file_path):
     return df
 
 def merge_data(verra_df, gold_df):
-    # Drop empty columns or columns with only NA values
-    # verra_df = verra_df.dropna(axis=1, how='all')
-    # gold_df = gold_df.dropna(axis=1, how='all')
     
-    # # Define common columns
-    # common_columns = [
-    #     "ID", "Name", "Project Type", "Country", 
-    #     "Estimated Annual Emission Reductions", 
-    #     "Methodology","Project Registration Date"
-    # ]
-    
-    # # Add columns only if they exist
-    # if 'Proponent' in verra_df.columns and 'Proponent' in gold_df.columns:
-    #     common_columns.append("Proponent")
-    # if 'AFOLU Activities' in verra_df.columns and 'AFOLU Activities' in gold_df.columns:
-    #     common_columns.append("AFOLU Activities")
-    # if 'Status' in verra_df.columns and 'Status' in gold_df.columns:
-    #     common_columns.append("Status")
-    # if 'Region' in verra_df.columns and 'Region' in gold_df.columns:
-    #     common_columns.append("Region")
-    
-    # # Merge datasets and keep only common columns
-    # unified_df = pd.concat([verra_df, gold_df], ignore_index=True)
-    # unified_df = unified_df[common_columns]
-    # unified_df.to_csv('unified_dataset.csv',index=False)
-
     #combining the dataframes
     df_unified = pd.concat([gold_df, verra_df], ignore_index=True) 
 
