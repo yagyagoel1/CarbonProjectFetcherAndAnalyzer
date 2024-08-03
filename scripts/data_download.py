@@ -9,6 +9,8 @@ import time
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../utils')))
 from logger import logger
+
+
 def is_file_older(file_path):
     #check if the file exists 
     if os.path.exists(file_path):
@@ -17,6 +19,7 @@ def is_file_older(file_path):
         file_age_in_days = file_age_in_seconds / (24 * 60*60)
         return file_age_in_days > 1
     return True
+
 def download_and_extract_zip(url, zip_filename, target_files):
     output_filename= "public/"
     need_to_download= False
@@ -28,7 +31,7 @@ def download_and_extract_zip(url, zip_filename, target_files):
             need_to_download = True #if the file is more than 1 day setting download to true
             break
 
-    #if hitting the url to get the zip file that has the file 
+    #hitting the url to get the zip file that has the file 
     if need_to_download:
         response = requests.get(url) 
         if response.status_code == 200:#if the req is successful then save the zip file 
