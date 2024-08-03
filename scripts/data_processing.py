@@ -30,7 +30,7 @@ def clean_verra_data(file_path):
 
     return df
 
-def merge_datasets(verra_df, gold_df):
+def merge_data(verra_df, gold_df):
     # Drop empty columns or columns with only NA values
     # verra_df = verra_df.dropna(axis=1, how='all')
     # gold_df = gold_df.dropna(axis=1, how='all')
@@ -57,7 +57,8 @@ def merge_datasets(verra_df, gold_df):
     # unified_df = unified_df[common_columns]
     # unified_df.to_csv('unified_dataset.csv',index=False)
 
-    df_unified = pd.concat([gold_df, verra_df], ignore_index=True) #Combining the two dataframes
+    #combining the dataframes
+    df_unified = pd.concat([gold_df, verra_df], ignore_index=True) 
 
 
     
